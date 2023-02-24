@@ -14,11 +14,20 @@ export interface Props {
 
 const { meta } = Astro.props;
 ---
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ECY8SML3GG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ECY8SML3GG');
+</script>
 
 <Layout {meta}>
-  <slot name="announcement">
+  <!-- <slot name="announcement">
     <Announcement />
-  </slot>
+  </slot> -->
   <slot name="header">
     <Header {...headerData} isSticky showRssFeed showToggleTheme />
   </slot>
