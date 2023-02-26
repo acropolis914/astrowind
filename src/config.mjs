@@ -9,7 +9,7 @@ const CONFIG = {
 
   title: 'Hi, It\'s me, Paul Harvey',
   description:
-    'And this is my vlog!',
+    'And this is my blog!',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"

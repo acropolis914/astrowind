@@ -24,13 +24,28 @@ const meta = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
+    callToAction={{ text: 'Read my Blogs', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:books' }}
     callToAction2={{ text: 'Learn more', href: '#features' }}
     image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden lg:inline">create your website <br class="2xl:hidden"/> with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 2.0</span> + Tailwind CSS
+      <div id="typewriter"></div>
+      <script is:inline src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+      <script is:inline type='text/javascript'>
+        const typewriter = new Typewriter('#typewriter', {
+          loop: true,
+        });
+    
+        typewriter.typeString('I am Paul Harvey.')
+          .pauseFor(300)
+          .deleteAll()
+          .typeString('A visionary')
+          .pauseFor(0)
+          .deleteChars(10)
+          .typeString('<span class="text-teal-300"> future educator!</span>')
+          .pauseFor(2500)
+          .start();
+      </script>
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -43,11 +58,26 @@ const meta = {
     </Fragment>
   </Hero>
 
+
   <!-- Note Widget ******************* -->
 
   <Note />
 
   <!-- Features Widget *************** -->
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <LatestPosts
+  title="Find out more content in our Blog"
+  information={`Hello. Read my blogs.
+  `}
+  postIds={[
+    'get-started-website-with-astro-tailwind-css.md',
+    'how-to-customize-astrowind-to-your-brand.md',
+    'useful-resources-to-create-websites.md',
+    'astrowind-template-in-depth.md',
+  ]}
+/>
 
   <Features
     highlight="Features"
@@ -260,21 +290,6 @@ const meta = {
     ]}
   />
 
-  <!-- HighlightedPosts Widget ******* -->
-
-  <LatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-			Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-			Astro is a very interesting technology. Thanks.
-		`}
-    postIds={[
-      'get-started-website-with-astro-tailwind-css.md',
-      'how-to-customize-astrowind-to-your-brand.md',
-      'useful-resources-to-create-websites.md',
-      'astrowind-template-in-depth.md',
-    ]}
-  />
 
   <!-- FAQs Widget ******************* -->
 
