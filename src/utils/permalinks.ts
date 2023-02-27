@@ -55,13 +55,10 @@ export const getPermalink = (slug = '', type = 'page'): string => {
   return definitivePermalink(permalink);
 };
 
-/** */
 export const getHomePermalink = (): string => getPermalink('/');
 
-/** */
 export const getBlogPermalink = (): string => getPermalink(BLOG_BASE);
 
-/** */
 export const getAsset = (path: string): string =>
   '/' +
   [BASE_PATHNAME, path]
@@ -69,5 +66,4 @@ export const getAsset = (path: string): string =>
     .filter((el) => !!el)
     .join('/');
 
-/** */
 const definitivePermalink = (permalink: string): string => createPath(BASE_PATHNAME, permalink);
