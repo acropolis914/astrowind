@@ -2,7 +2,7 @@
 import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -21,10 +21,9 @@ const meta = {
 ---
 
 <Layout {meta}>
-  <!-- Hero Widget ******************* -->
 
-  <Hero
-    callToAction={{ text: 'Read my Blogs', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:books' }}
+  <Hero2
+    callToAction={{ text: 'Read my Blogs', href: '#latest', icon: 'tabler:books' }}
     callToAction2={{ text: 'Learn more', href: '#features' }}
     image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
   >
@@ -37,11 +36,13 @@ const meta = {
         });
     
         typewriter.typeString('I am Paul Harvey.')
-          .pauseFor(300)
-          .deleteAll()
-          .typeString('A visionary')
-          .pauseFor(0)
-          .deleteChars(10)
+          .pauseFor(1000)
+          .typeString('<br>A learner.')
+          .pauseFor(1000)
+          .deleteChars(8)
+          .typeString('dreamer.')
+          .pauseFor(1000)
+          .deleteChars(8)
           .typeString('<span class="text-teal-300"> future educator!</span>')
           .pauseFor(2500)
           .start();
@@ -50,27 +51,18 @@ const meta = {
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 2.0 +
-        Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span> Suitable for Startups,
-      Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.
+        <span class="font-semibold">This is my site.</span> I write just about anything I can think of.
+        </span>
     </Fragment>
   </Hero>
 
 
-  <!-- Note Widget ******************* -->
-
   <Note />
 
-  <!-- Features Widget *************** -->
-
-  <!-- HighlightedPosts Widget ******* -->
-
+  <div id='latest'></div>
   <LatestPosts
   title="Find out more content in our Blog"
-  information={`Hello. Read my blogs.
-  `}
+  information={`Hello. Read my blogs.`}
   postIds={[
     'get-started-website-with-astro-tailwind-css.md',
     'how-to-customize-astrowind-to-your-brand.md',
@@ -346,7 +338,6 @@ const meta = {
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
 
   <CallToAction
     callToAction={{

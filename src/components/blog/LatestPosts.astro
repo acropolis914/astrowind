@@ -5,7 +5,6 @@ import { getBlogPermalink } from '~/utils/permalinks';
 import { findLatestPosts } from '~/utils/blog';
 
 export interface Props {
-  title?: string;
   allPostsText?: string;
   allPostsLink?: string | URL;
   information?: string;
@@ -14,7 +13,7 @@ export interface Props {
 
 const {
   title = await Astro.slots.render('title'),
-  allPostsText = 'View all posts',
+  allPostsText = 'View all my blogs',
   allPostsLink = getBlogPermalink(),
   information = await Astro.slots.render('information'),
   count = 4,
