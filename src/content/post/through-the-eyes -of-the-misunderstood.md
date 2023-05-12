@@ -1,10 +1,13 @@
 ---
+publishDate: 2023-02-23T00:00:00Z
 external: false
 draft: false
-title: "Through the eys of the misunderstood"
-description: "You can author content using the familiar markdown syntax you already know. All basic markdown syntax is supported."
+title: "Through the eyes of the misunderstood"
+description: "There is this one student who stood out...for what reason?"
 date: 2023-02-23
 series: "Out-of-Class"
+tags:
+    -   students
 ---
 
 I've already racked up around 50 hours of teaching since last semester when we first started the internship.

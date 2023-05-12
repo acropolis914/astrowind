@@ -1,7 +1,7 @@
 import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
-  name: 'AstroWind',
+  name: 'Paul\'s Blog',
 
   origin: 'https://paulharveys.netlify.app',
   basePathname: '/',
