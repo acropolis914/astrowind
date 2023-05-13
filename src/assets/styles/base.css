@@ -16,7 +16,7 @@
   }
 
   .bg-dark {
-    @apply bg-slate-900;
+    @apply bg-gradient-to-bl from-sky-900 to-blue-900;
   }
   
   .btn {
@@ -38,6 +38,13 @@
 
 #header.scroll {
   @apply shadow-md md:shadow-lg bg-white md:bg-white/90 md:backdrop-blur-sm dark:bg-slate-900 dark:md:bg-slate-900/90;
+}
+
+#canvas-image-blending {
+  @apply fixed bg-cover hidden dark:block inset-0 h-[calc(100%+1rem)] z-[-1] bg-no-repeat blur-xl scale-125
+  /* position: absolute; display: block;
+  width: 100%;
+  height: 100%; */
 }
 
 .dropdown:hover .dropdown-menu {
