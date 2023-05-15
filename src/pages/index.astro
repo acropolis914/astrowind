@@ -3,6 +3,7 @@ import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero2 from '~/components/widgets/Hero.astro';
+import TitleAnim from '~/components/widgets/TitleAnimation.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -28,56 +29,15 @@ const meta = {
     callToAction2={{ text: 'About me', href: 'about' }}
     image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
   >
-    <Fragment slot="xtitle" class="hidden">
-      <div id="typewriter"></div>
-      <script is:inline src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-      <script is:inline type='text/javascript'>
-        const typewriter = new Typewriter('#typewriter', {
-          loop: true,
-        });
-    
-        typewriter.typeString('I am Paul Harvey.<br>')
-          .pauseFor(1000)
-          .typeString('A learner.')
-          .pauseFor(1000)
-          .deleteChars(8)
-          .typeString('dreamer.')
-          .pauseFor(1000)
-          .deleteChars(8)
-          .typeString('<span class="text-teal-300"> future educator!</span>')
-          .pauseFor(2500)
-          .start();
-      </script>
-    </Fragment>
-
     <Fragment slot="title">
-      <div id="typewriter"></div>
-      <script is:inline src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-      <script is:inline type='text/javascript'>
-        const typewriter = new Typewriter('#typewriter', {
-          loop: true,
-        });
-    
-        typewriter.typeString('Hi Janna uwu.<br>')
-          .pauseFor(1000)
-          .typeString('I love you.')
-          .pauseFor(1000)
-          .deleteChars(9)
-          .pauseFor(500)
-          .typeString('miss you.')
-          .pauseFor(1000)
-          .deleteChars(11)
-          .typeString('<span class="text-teal-300"> UwU</span>')
-          .pauseFor(2500)
-          .start();
-      </script>
+      <TitleAnim/>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="sm:scale-100 scale-50">
-        <span class="font-semibold">This is my blogsite site.</span>
+      <span class="sm:scale-100 scale-100 flex flex-wrap justify-center">
+        <span class="font-semibold">This is my blogsite site. </span>
         <span>I write just about anything I can think of.</span>
-        <span class="font-normal text-sm break">(Currently just about my teaching tho.)</span>
+        <!-- <span class="font-normal text-sm line-break">(Currently just about my teaching tho.)</span> -->
       </span>
     </Fragment>
   </Hero2>
@@ -94,26 +54,4 @@ const meta = {
 /> -->
 </Layout>
 
-<canvas id="canvas-image-blending" class=""></canvas>
-<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
-<script is:inline type='text/javascript'>
-var granimInstance = new Granim({
-  element: '#canvas-image-blending',
-  direction: 'top-bottom',
-  isPausedWhenNotInView: true,
-  ximage : {
-      source: '/images/bg-stars.jpg',
-      blendingMode: 'normal'
-  },
-  states : {
-      "default-state": {
-          gradients: [
-              ['#23383f', '#002144'],
-              ['#002144','#23383f'],
-              ['#003644','#074437']
-          ],
-          transitionSpeed: 7000
-      }
-  }
-});
-</script>
+
