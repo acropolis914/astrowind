@@ -51,7 +51,7 @@ export const headerData = {
         },
         {
             text: 'Gallery',
-            href: getPermalink('/gallery/gallery'),
+            href: getPermalink('/gallery'),
         },
         {
             text: 'About Me',
